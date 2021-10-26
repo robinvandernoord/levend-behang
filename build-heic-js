@@ -1,0 +1,4 @@
+# convert nodejs heic-cli to standalone
+
+npm install heic-cli
+npx pkg node_modules/heic-cli/bin.js -o heic

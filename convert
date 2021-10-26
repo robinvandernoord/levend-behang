@@ -1,0 +1,19 @@
+#!/bin/bash
+# usage: ./convert FILE.heic [/path/to/folder]
+
+output=${2:-/home/robin/.dynwal/images/}
+rm $output/WP-*.jpg
+_dir=$(dirname "$0")
+heic="$_dir/heic"
+
+idx=$($heic info < $1 | grep -o "[0-9]*")
+idx=$(($idx-1))
+
+for (( c=0; c<$idx; c++ )); 
+
+do 
+  cc=$(($c+1));
+  echo "converting $cc/$idx";
+  $heic -m$c < $1 > "$output/WP-$cc.jpg"
+done
+echo "done!"
