@@ -1,3 +1,6 @@
+#!/bin/bash
+
+# download flowy executable to ~/.dynwal
 echo "installing flowy"
 mkdir ~/.dynwal/images -p
 cd ~/.dynwal/
@@ -6,6 +9,7 @@ unzip flowy_linux_gnu.zip
 rm flowy_linux_gnu.zip
 chmod +x flowy
 
+# if there is no 'heic' executable, compile it with 'build-heic-js'
 cd -
 echo "installing heic"
 cp convert heic ~/.dynwal/

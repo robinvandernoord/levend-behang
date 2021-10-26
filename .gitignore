@@ -2,3 +2,4 @@
 node_modules/
 heic
 package-lock.json
+*.swp
