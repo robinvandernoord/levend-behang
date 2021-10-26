@@ -1,7 +1,9 @@
 #!/bin/bash
 # usage: ./convert FILE.heic [/path/to/folder]
 
-output=${2:-/home/robin/.dynwal/images/}
+systemctl --user stop flowy
+
+output=${2:-~/.dynwal/images/}
 rm $output/WP-*.jpg
 _dir=$(dirname "$0")
 heic="$_dir/heic"
@@ -16,4 +18,11 @@ do
   echo "converting $cc/$idx";
   $heic -m$c < $1 > "$output/WP-$cc.jpg"
 done
+
+echo "writing new config"
+/opt/dynwal/flowy --dir /home/test/.dynwal/images/ &
+sleep 1;
+kill %1
+
+systemctl --user start flowy
 echo "done!"

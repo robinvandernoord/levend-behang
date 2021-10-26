@@ -2,7 +2,7 @@
 Name=HEIC convert
 GenericName=HEIC/HEIF to JPG
 Keywords=heic;heif
-Exec=/home/robin/.dynwal/convert
+Exec=/opt/dynwal/convert
 #Terminal=false
 #Type=Application
 #NoDisplay=true

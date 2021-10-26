@@ -1,0 +1,9 @@
+[Unit]
+Description=flowy
+
+[Service]
+ExecStart=/opt/dynwal/flowy -d %h/.dynwal/flowy/images/
+# = ~/.dynwal/flowy
+
+[Install]
+WantedBy=multi-user.target
