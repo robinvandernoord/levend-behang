@@ -20,7 +20,7 @@ do
 done
 
 echo "writing new config"
-/opt/dynwal/flowy --dir /home/test/.dynwal/images/ &
+/opt/dynwal/flowy --dir /home/$USER/.dynwal/images/ &
 sleep 1;
 kill %1
 
